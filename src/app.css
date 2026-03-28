@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Noto+Serif+SC:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply bg-abyss text-gray-100 font-mono;
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-abyss;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-quantum-gold-dim rounded;
+  }
+}
+
+@layer components {
+  .quantum-border {
+    border: 1px solid rgba(212, 168, 23, 0.3);
+    box-shadow: 0 0 12px rgba(212, 168, 23, 0.15);
+  }
+
+  .quantum-border:hover {
+    border-color: rgba(212, 168, 23, 0.7);
+    box-shadow: 0 0 20px rgba(212, 168, 23, 0.3);
+  }
+
+  .glitch-char {
+    display: inline-block;
+    color: #00e5ff;
+    animation: quantumFlicker 0.1s steps(1) infinite;
+  }
+}
